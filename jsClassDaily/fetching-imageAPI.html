@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 30/11/23</title>
+</head>
+<body>
+       <h1> FETCHING IMAGE </h1> 
+        <button id = "btnclick">fetch now</button>
+       <!-- <img src=""  alt="">-->
+<!-- <img id="image"> -->
+
+<div class ="card">
+    
+    <div class = "container">
+        <img id ="dogimage">
+        <img id = "image2">
+        <img id = "image3">
+
+    </div>  
+</div>
+
+<!-- <div class ="card1">
+    <img id ="dogimage">
+    <div class = "container">
+    </div>  
+</div> -->
+
+    <script>
+           let btn =document.getElementById("btnclick") ;
+          // let image= document.getElementById("image");
+          let dogimage= document.getElementById("dogimage");
+          let image2= document.getElementById("image2");
+          let image3= document.getElementById("image3");
+
+
+
+           btn.addEventListener("click",function(){
+            fetch("https://dog.ceo/api/breeds/image/random")
+            .then(response => response.json())
+            .then(result => {
+                 console.log(result);
+                 
+                 dogimage.src=result.message;
+                 image2.src=result.message;
+                 image3.src=result.message;
+
+         })
+       // .catch(console.error("there is error");) 
+        }) 
+        
+    </script>
+</body>
+</html>

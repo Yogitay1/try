@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex in js 04/12/23</title>
+</head>
+<body>
+    <!-- regular Expression(REGEX): with the help of  regex , we can do advance validations like searchimg ,finding , matching.
+  regex is a pattern that allows us to describe and match and find the things. 
+   
+  how to create a regex?
+  - 2 ways we can create regex 
+      -first is regex literal:pattern will be enclose in forward slashes
+                              we can create regex with flag or without flags.
+                              
+                              const regex=/patterns/
+                              const regex=/patterns/flags;
+     
+     
+     
+       -second is regex constructor:whenever we use new keyword  it is a  constructor
+       new Regex(patterns[,flags])
+    
+    
+       flags:flags are always used for advance serching)
+       eg :
+        g:global searching
+        i:case-insensitive searching
+        m:multiline searching 
+        the above three g,i,m are flags according to requirement we can use these flags
+    
+    
+    
+    
+    
+    
+    
+    -->
+
+
+
+
+    <!-- write a java script code to write indian mobile number -->
+    <script>
+        // writing the indian num using regex
+        //const regex=/^[6-9]\d{9}$/;
+
+
+        //REGEX literal:
+
+        var str ="Hello students . Hello all of you . hello AI"
+        //const regex=/Hello/;
+        //const regex=/yogi
+        ta/g;  //o/p:null
+        //const regex=/Hello/g;
+        const regex=/Hello/gi;
+        console.log(str.match(regex))
+
+ //REGEX constructor: when ever you want to ask anythimg dynamically from user u can use this constructor
+  
+   const regexp =new RegExp("abc","gi");
+
+   const str2="abc ,ABC,Abc ,ABc,AbC,";
+
+     console.log(str2.match(regexp));
+
+     //dynamic creating :
+     const pat =prompt("enter your pattern")
+     //xyz
+     const regexpat = new RegExp(`${pat}`,"gi")
+
+     const str3="xyz,XYZ,XyZ";
+
+     console.log(str3.match(regexpat));
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event capturing.</title>
+
+<style>
+    
+</style>
+
+
+  </head>
+  <body>
+    <!--DOM 
+    Event Bubbling
+    event capturing
+-->
+
+    <div id="parent">
+      <button id="child">click me</button>
+    </div>
+<!--eg:3-->
+    
+     <div id="e1">1
+        <div id="e2">2
+            <div id="e3">3
+                <button id="e1">event Bubbling</button>
+                <!-- this is the way we write event bubblig 
+                bubbling means water flows from down to up 
+                so here first it will hit e3 and then e2 and then e1 -->
+                
+               </div>
+            </div>
+        </div>
+
+    <script>
+      document.getElementById("parent").addEventListener("click", function () {
+        alert("parent element is clicked");
+      });
+
+      document.getElementById("child").addEventListener("click", function () {
+        alert("child element is clicked");
+      });
+
+      
+
+        document.getElementById("e1").addEventListener("click", ()=> {
+           
+            alert("e1 is clicked");
+        },true);
+
+        document.getElementById("e2").addEventListener("click",  ()=> {
+          
+        alert("e2 is clicked");
+        },true);
+
+        document.getElementById("e3").addEventListener("click", (e)=> {
+          //  e.stopPropagation();//to stop the bubbling phase
+        alert("e3 is clicked");
+        },true);
+
+
+    </script>
+  </body>
+</html>

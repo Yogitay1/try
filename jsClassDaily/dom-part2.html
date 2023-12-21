@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Dom part2</title>
+</head>
+<body>
+    <!--<figure>
+        img src="./AITfolder/img/team-4.jpg" alt="i am student">
+        <figcaption>suscess is possible</figcaption>
+
+    </figure>-->
+    <div id="output">
+
+    </div>
+
+    <script>
+        //generating dynamically figure tag using js 
+        let fig = document.createElement('figure');//passing tag name as a parameter
+ let img=document.createElement('img');
+
+ //for setting the attribute
+ img.setAttribute('src', "./team.jpg");
+ img.setAttribute('alt','student quotes');
+
+
+ //when you want to get the values of attribute we get attribute method.
+
+
+
+ //to create figcap:
+ let figcap=document.createElement('figcaption');
+
+ figcap.innerHTML="sucess is possible";
+ console.log(fig,img,figcap);
+
+
+ //for creating  a seperate text node:
+ let txt=document.createTextNode('sucess is posssible');
+ console.log(txt);
+
+
+ //how to place text inside figcaption:
+  figcap.appendChild(txt);
+  console.log(fig,figcap);
+
+
+  //how to place img and figcaption tag inside the figure tag?
+  fig.appendChild(img);
+  fig.appendChild(figcap)
+
+  console.log(fig);
+
+  //to see the output?
+
+  //but why i am not getting output
+  //to see the output
+   document.querySelector('body').appendChild(fig);
+  //document.getElementsByTagName('body')[0].appendchild(fig);
+
+   //-------------------------------------example2
+    
+
+ // what is string interpolation?
+
+
+
+    //can we use single''quote and double quote"" in multiple line ? ans:NO
+    //single quote or double quote is used to write single line string
+    // let example = "my name is 
+   // yogitha";
+   //answer:no
+    
+   
+   // why we use back tick operator ? 
+   //ans:we can use backtick operator when we want to write multi line string
+   let example = `my name is 
+   yogita`;
+
+   //---------------------------
+   //second way to generate entire output is 
+      
+   let example2=` <figure>
+        img src="./AITfolder/img/team-4.jpg" alt="i am student">
+        <figcaption>suscess is possible</figcaption>
+
+    </figure>`;
+     document.getElementById('output').innerHTML=example2;
+  
+
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   </script>
+</body>
+</html>

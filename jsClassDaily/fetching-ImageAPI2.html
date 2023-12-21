@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 30/11/23</title>
+</head>
+<body>
+    <h1> fetching Now</h1>
+    <button id = "butnid">fetchNow</button>
+
+    <div class = "container">
+    <div class = "card">
+        <img id ="image1">
+        <img id ="image2">
+        <img id ="image3">
+
+
+    </div>
+         </div>
+       <script>
+            
+             let btn = document.getElementById("butnid");
+             let image1 = document.getElementById("image1");
+             let image2 = document.getElementById("image2");
+             let image3 = document.getElementById("image3");
+
+             
+   
+
+             btn.addEventListener("click",function(){
+              let A =  fetch("https://dog.ceo/api/breeds/image/random")
+                 .then(response => response.json())
+                 .then( result =>{ 
+                   image1.src =result.message;
+                    image2.src =result.message;
+                    image3.src =result.message;
+
+                 //  (image1 ,image2,$image3).src =result.message;
+
+
+                 
+
+                   // const fruits = ["apple", "orange", "cherry"];
+//fruits.forEach(myFunction);
+
+             
+             
+             //console.log(result)
+            });
+
+
+                
+             })
+             
+
+
+       </script>
+   
+
+
+</body>
+</html>

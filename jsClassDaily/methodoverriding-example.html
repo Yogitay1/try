@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 15-12-23</title>
+</head>
+<body>
+    <script>
+        class Employee {
+            login(){
+                console.log("employee logged in succesfully");
+
+            }
+            logout(){
+                console.log("employee logged out successfully");
+
+            }
+            requestLeave(leaves){
+                console.log(`Employee has requested ${leaves} leaves `)
+            }
+        }
+           
+        class Programmer extends Employee{
+            requestCoffee(x){
+                console.log(`Employyee has req ${x} coffee `);
+
+            }
+            requestLeave(leaves){
+                super.requestLeave(3);
+                console.log(` one extra is granted-auto approved ${leaves+1}`);
+            } 
+        }
+        let p = new Programmer();
+        p.requestCoffee(2);
+        p.requestLeave(2);
+
+//same method diff functionality
+
+
+           </script>
+</body>
+</html>

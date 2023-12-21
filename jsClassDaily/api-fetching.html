@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetching table and presenting it to table</title>
+  </head>
+  <body>
+    <div id="table-container" style="border: 2px solid black;"></div>
+    <script>
+      //now making request to the apu and fetch the data
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => response.json())
+        .then(result=>{
+          let tableHtml = `<table border>
+                    <tr bgcolor=red>
+                        <th>User ID</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Body</th>
+                    </tr>`;
+
+
+                    result.forEach(row=>{
+
+                        tableHtml+=`<tr>
+                            
+                                    <td>${row.userId}</td>
+                                    <td>${row.id}</td>
+                                    <td>${row.title}</td>
+                                    <td>${row.body}</td>
+                            </tr> `;
+                        
+                    });
+
+                    tableHtml+='</table>';
+
+                    
+        document.getElementById('table-container').innerHTML=tableHtml;
+        });
+
+
+      //creating an html table to display the data
+      /*let tableHTML =` <table border> 
+    <tr>
+        <th>User ID</th>
+        <th>ID </th>
+        <th>title</th>
+        <th>body</th>
+
+        </tr>`;
+
+        //Itreate over the data and add  each row to the table:
+        result.forEach( row =>{
+            tableHTML+=`<tr>
+           <td>${row.userId}</td>
+           <td>${row.id}</td>
+           <td>${row.Title}</td>
+           <td>${row.body}</td>
+
+</tr>`
+        });
+        // //close the table
+         tableHtml+=`</table>`
+                  
+
+            }) */
+    </script>
+  </body>
+</html>

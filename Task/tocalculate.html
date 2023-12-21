@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding two numbers</title>
+
+    
+</head>
+
+
+<body>
+
+    
+    <input type="text" placeholder="enter first number" id="num1"><br/><br/>
+
+    <input type="text" placeholder="enter second number" id="num2"><br/><br/>
+    
+    <!-- <input type="button" value="calculate me"> -->
+    <button id="add">calculate me</button><br>
+
+    <p id = "calculating">my answer will be</p> 
+    
+
+    <script>
+             
+                add.addEventListener("click",function() {
+
+                let numb1 = document.getElementById("num1").value ;
+                let numb2 = document.getElementById("num2").value;
+                let result = parseInt(numb1)+ parseInt(numb2);
+                
+                document.getElementById("calculating").innerHTML = "the sum of two numbers is "+" " + res  ;
+
+       });
+    </script>
+
+</body>
+</html

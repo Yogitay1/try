@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods</title>
+  </head>
+  <body>
+    <!--
+       quetion:difference between push and unshift , and pop and shift
+
+        Array Methods :
+        discussing about predefined methods
+
+        -push(); -  in push method ,the element will be added to the end of the array  
+        -pop(); - it will delete the last element from the array 
+        -unshift(): - in un shift method the element will be added to the start of the array 
+        -shift(): - in shift method the element will delete the start of the array.
+        -slice()- it will slice element or string into multiple peices
+        -concat()
+        -sort():-sort method gives the output as a dictionary order
+       -splice(): with the help of splice method we can add an element from anywhere and can delete the element from anywhere 
+       -map(): 
+       -filter():
+       -reduce():
+       to know about map filter reduce method we need to  first understand about functions
+       
+    -->
+    <script>
+      //array literal:
+      let cricketer = ["Sachin", "dravid", "ganguly"];
+      console.log(cricketer);
+
+      //array constructor:
+      let new_cricketers = new Array("virat", "rohit", "kl rahul");
+      // console.log(cricketer , new_cricketers);
+
+      //splice
+      //cricketer.splice(1,0,"yogita", "reddy");
+      //console.log(cricketer);
+
+      //if i want to repace dravid with yogita reddy then
+      //cricketer.splice(1,1,"yogita", "reddy");
+      //console.log(cricketer);
+
+      //if i want sachin,dravid,harshita,reddy , dravid.
+      cricketer.splice(1, 0, "harshita", "reddy");
+      console.log(cricketer);
+
+      //push:
+      let fruits = ["apple", "custard apple", "sugar apple", "ice apple"];
+
+      console.log(fruits);
+
+      fruits.push("pine apple");
+      console.log(fruits);
+
+      fruits.pop();
+      console.log(fruits);
+
+      fruits.pop();
+      console.log(fruits);
+
+      fruits.unshift("velvet apple", "rose apple");
+      console.log(fruits);
+
+      fruits.shift();
+      console.log(fruits);
+
+      //slice
+      var a = [1, 2, 3, 4, 5, 6, 7, 8];
+
+      // console.log(a.slice(6));
+      console.log(a.slice(2, 6));
+
+      //concat():
+      var b = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+      var c = [9, 10, 11, 12, 13, 14];
+
+      var d = b.concat(c);
+      console.log(d);
+      // console.log(b.concat(c));
+
+      //sort()
+      var nums = [4, 21, 8, 14, 2, 11, 9, 1];
+      console.log(nums.sort());
+
+      //reverse() method
+      // console.log(nums.reverse());
+    </script>
+  </body>
+</html>

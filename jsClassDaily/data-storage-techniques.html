@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<title>Data storage Techniques</title>
+</head>
+<body>
+
+    <script>
+        //Array constructor
+        var courses = new Array ("frontend " , 'Backend' , "Testing ", "Digital marketing " , "DtaScience");
+        document.write(courses + "</br>");
+        document.write(typeof courses + "</br>")
+
+
+        //retrieval of data
+        document.write("<h2>array retrieval of data manually </h2>")
+        document.write(courses[0] + "</br>");
+        document.write(courses[1] + "</br>");
+        document.write(courses[2] + "</br>");
+        document.write(courses[3] + "</br>");
+        document.write(courses[4] + "</br>");
+
+        //retrieval of data using loops:
+        document.write("<h2>array retrieval by using loops  </h2>");
+           for(let i=0;i<courses.length;i++){
+            let p = courses[i];
+            document.write(p +"</br>");
+           }
+
+    //objects:Data stored in the form of key:value 
+
+    var product={
+        name: "Macbook Air",
+        model: "MA0001",
+        price: 200000,
+        desc :"Good products "
+    };
+    document.write("<h2>object retrieval of data manually </h2>");
+    document.write(product.name + "</br>") ;
+    document.write(product.model + "</br>") ;
+    document.write(product.price + "</br>") ;
+    document.write(product.desc + "</br>") ;
+
+    document.write("<h2>object retrieval of data by using loops  </h2>");
+
+   //for-in loop :
+         for(let items in product){
+            document.write(product[items] +"</br>")
+         }
+
+         //Array of objects:
+       {  
+         var users=[{
+            id:1,
+            name:"yogita",
+            age:20,
+         },
+         {
+            id:2,
+            name:"reddy",
+            age:23,
+         },
+         {
+         id: 3,
+         name:"bo",
+         age : 12,
+         }
+        ];
+
+
+ document.write("<h2> retrieving the data manually: </h2>")
+
+ document.write(users[0].id +" </br>");
+ document.write(users[0].name +" </br>");
+ document.write(users[0].age +" </br>");
+ document.write(users[1].id +" </br>");
+ document.write(users[1].name +" </br>");
+ document.write(users[1].age +" </br>");
+ document.write(users[2].id +" </br>");
+ document.write(users[2].name +" </br>");
+ document.write(users[2].age +" </br>");
+      }
+
+ document.write("<h2> retrieving the data using loops</h2>")
+
+for (let i=0;i<users.length;i++)
+  {
+     document.write(users[i].id+"<br>");
+     document.write(users[i].name+"<br>");
+     document.write(users[i].age+"<br>");
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        functions:
+        what is functions and why we use functions 
+        --functions are basically a block of code that we write and we can use it whenever we need it
+           like it is a block of code that can be defined and can be called at any point of time. and we can reuse it when ever we need it.
+
+           how to define a function?
+           we use keyword called function with this we will define.
+
+           syntax:
+           function function_name(parameter1 ,parameter 2){
+             
+            //function logics
+           }
+
+           to call the function: function_name(value1,value2);
+      
+           types of functions:
+             -function without parameters  
+             -function with parametrs 
+             -function with return statements
+             -function with default parameters 
+             -named function /function with a name 
+             -Anonymous function/function with out a name 
+             -variable function
+             -callback function
+             -nested function /function inside a function
+             -recursive function / a function which calls itself again and again 
+             -IIFE(immediately invoked function expression 
+             -ES6+
+             -Arrow functions 
+             
+
+
+           
+
+    -->
+     
+    <script>
+
+        // //function example
+        // function text(){
+        //      console.log("good morning");
+        // }
+        // text();
+        // text();
+        // text();
+               
+        
+        
+        //calculate the gst of 10,000 it may be 14% gst 
+        //example owning a electronic shop for every product there will be 14% GST
+       // so every time when i need gst function then i just can use function called GST
+              
+       function gstCal(){
+               let price=500;
+               let gstpercentage=14;
+               
+               let totalprice= price+(price*gstpercentage/100);
+               console.log(totalprice);
+                 }
+         gstCal();
+
+         //the above gstCal is not an ideal function bcause we have given the values in that function only like price and percentage also.
+                 
+
+         //so if we have a shop then we will be having multiple products 
+         //so in the above gstCal , we have taken all the price in that only  
+             //so the price is 10000 the gst may be 12% and price is 1 lakh then gst can be 14 %
+
+             function gst(pri,gstp){
+                      let tp= pri+(pri*gstp/100)
+                      console.log(tp);
+                //function logics , 
+              //to calculate gst  we need price and gst percentage as parameters
+             }
+
+             gst(1000,10);
+             gst(800,8);
+
+
+
+             //ceating a function on adding three numbers 
+                function add(num1 , num2 , num3){
+                    let adding=num1+num2+num3;
+                    console.log(adding);
+
+                }
+
+                add(2,3,4);
+
+
+
+                //function with return statement:
+                  function gstp(p,gp){
+                    let tp = p+(p*gp/100);
+                    //console.log(tp);
+                    return tp;
+                   }
+                
+             //if you go to shop you  bought 5rs choclate and you gave 10rs to shop keeper , so shopkeeper will return you the left over money so i have to catch it
+              
+                let tp1 = gstp(700,10);
+                let tp2 = gstp(9000,8);
+                         
+                console.log(tp1,tp2);
+
+                 
+
+    </script>
+    
+         
+
+
+</body>
+</html>

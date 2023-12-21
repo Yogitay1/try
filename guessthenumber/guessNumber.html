@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>guess the number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div><button id="playagain">play again</button></div>
+
+      <h1>guess the number between 1-20</h1>
+    </div>
+
+    <div class="middle">
+      <div class="left">
+        <p>guess your number</p>
+        <input type="number" id="value" placeholder="enter number" />
+        <button id="guess">guess</button>
+      </div>
+
+      <div class="right">
+        <p>your score: <span id="yourscore"> 20 </span></p>
+        <p>highest score: <span id=" highestscore"> 00 </span></p>
+      </div>
+    </div>
+    <!-- <script src="guessNumber.js"></script> -->
+    <script>
+      const btn = document.getElementById("guess");
+      const btn1 = document.getElementById("playagain");
+      const value = document.getElementById("value");
+      const yourscore = document.getElementById("yourscore");
+      const highestscore = document.getElementById(" highestscore");
+
+      let randomnum = Math.floor(Math.random() * 20 + 1);
+      console.log(randomnum);
+
+      btn.addEventListener('click', () => {
+        console.log(value.value);
+        if (randomnum == value.value) {
+          console.log("youguess right");
+          highestscore.innerText = yourscore.innerText;
+        } else {
+          console.log("not right");
+          let hi = yourscore.innerText - 1;
+          yourscore.innerText = hi;
+        }
+      });
+    </script>
+  </body>
+</html>

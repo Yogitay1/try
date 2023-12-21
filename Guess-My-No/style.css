@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik Broken Fax";
+}
+body{
+    color: white;
+    background-color: black;
+}
+header div{
+    display: flex;
+    justify-content: space-between;
+}
+.Again{
+    font-size: 40px;
+    padding: 20px;
+    margin: 20px;
+
+}
+header div p{
+    font-size:30px;
+    
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+
+}
+header{
+    border-bottom: 10px solid white;
+}
+.number{
+    font-size: 50px;
+    background-color:red ;
+    width:120px;
+    padding: 20px;
+    position: relative;
+    left:45%;
+    top:100px;
+    text-align: center;
+
+
+
+}
+main{
+    display: flex;
+    margin: 150px;
+    justify-content: space-around;
+}
+
+.guess{
+    padding: 20px;
+    width: 200px;
+    font-size: 50px;
+    text-align: center;
+    display: block;
+
+
+}
+.checkBtn{
+    font-size: 30px;
+    padding: 10px;
+    margin-top:30px;
+    margin-left: 20px;
+
+}
+.message{
+    font-size: 30px;
+    margin-bottom:30px ;
+    
+}
+.labelscore{
+font-size: 30px;
+  
+}
+.labelhighscore{
+    font-size: 30px;
+    
+}
+.right{
+    margin-left:90px ;
+}

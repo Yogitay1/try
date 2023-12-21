@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //callback function: calling back a function is basically what we are going to do here
+        //callback function is a function that // a function which is passed as an argument to another function , and main function is responsible to call that particular function.
+        // means main function is going to call the which i have passed the function as parameter means setTimeout method function will call the particular function  which we passed as an argument after 4 secs
+            setTimeout(function () {console.log("hello")},2000);
+            //we shall see how exact a call back function will work whwn we are discussing about api fetching
+        //API - application programming interface 
+        //with the help of api we search some data , when we use api we will assign some callback function , so api will take some time to fetch the data api will take 4 to 5 seconds to fetch the data from API , so we generally use callback function so that API will be fetched and other things will go on that the other code we have written
+             function greeting (yogitha){
+                console.log("hello everyone ");
+                yogitha();
+            }
+            function Hellooo(){
+                console.log("good morning");
+            } 
+            greeting(Hellooo); //here the o/p  comes like helloeveryone goodmorning because i passed  parameter called yogitha in function that is only called call back function
+
+
+            //eg:2
+
+            function greet(callback){
+                     console.log("hello everyone");
+                     callback();
+            }
+            function yogitha(){
+                console.log("i am yogitha");
+            }
+            greet(yogitha);
+
+        //     //using callback to add and multiply two numbers
+        //     function add(num1,num2)
+        //     {
+        //         return num1+num2;
+        //      }
+        //     function multiply(num1,num2)
+        //     {
+        //         return num1*num2;
+        //      }
+        //    function math(num1,num2,func){
+        //      return func(num1,num2);
+
+        //    }
+        //       math(1,2,add);
+        //      add(2,3);
+
+
+        //nested functions:creating a function inside a function
+          function one(){
+            
+          }
+
+
+    </script>
+      
+        
+
+
+
+</body>
+</html>

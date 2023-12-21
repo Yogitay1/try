@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+.header{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    color:white;
+    /* text-align: center; */
+  
+
+}
+.middle{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    color: white;
+    height: 80vh;
+   
+    
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.right{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: black;
+    
+}

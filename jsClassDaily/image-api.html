@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:1px solid red
+        }
+        section{
+          
+            display: grid;
+               grid-template-columns:repeat(3,1fr);
+               grid-gap : 10px;
+
+
+        } 
+    </style>
+</head>
+<body>
+    <h2> fetching same image 3 times </h2>
+    <button id="btnclick">fetch now</button>
+<section>
+    <div> <img class="image"></div>
+    <div> <img class="image"></div>
+    <div> <img class="image"></div>
+</section>
+
+
+   <script>
+    let btn = document.getElementById("btnclick");
+    let image=document.getElementsByClassName("image");
+    //getElementsByClassName always returns the  collection it starts from 0 so we can easily loop 
+        
+    btn.addEventListener('click',()=>{
+        fetch("https://dog.ceo/api/breeds/image/random")
+        .then(response => response.json())
+        .then(result => {
+            console.log(result)
+            // image[0].src = result.message;
+            // image[1].src = result.message;
+            // image[2].src = result.message;
+            
+            
+            for(let i=0;i<image.length;i++)
+              image[i].src=result.message;
+
+           
+
+        })
+    })
+
+   </script>
+
+</body>
+</html>

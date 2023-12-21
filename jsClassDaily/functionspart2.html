@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function with parameters:
+        function gstCal(price ,gp1){
+                 let tp = price+(price*gp1/100);
+                 return tp;
+
+        }
+        console.log(gstCal(1000,10));
+
+
+
+
+        //function with default parameters:
+        //default parameters means if there is a shop ,in that shop on every product there is 18%gst so for gst percentage i will give the default value
+              function gstcalculation(productPrice , gstpercentage=18) {
+
+                let totalPrice=productPrice+(productPrice*gstpercentage/100);
+                return totalPrice
+            }
+                let a=gstcalculation(1000);
+                let b=gstcalculation(1000);
+                
+                console.log(a,b);
+
+
+            //example2:- in this we do not pass any value it will take default value ,if we pass any value then it will take the current value.
+
+            function  gstcalculation1(price1 ,gstpercentage1=15){
+                 let totalPrice = price1+(price1*gstpercentage1/100)
+                 return totalPrice;
+            }
+
+            let soaps =gstcalculation1(400)
+            let chips = gstcalculation1(100,10)
+            let biscuits =gstcalculation1(200)
+            
+            console.log(soaps,chips);
+//anonymous function is a function without a function name 
+//a function with out a name is called anonymousfunction
+ // this anonymous function in js is commonly used to pass the multiple predefined functions
+// so anonymous function can be passed as argument to another function
+//setTimeout is a predefined function
+//so if i give a funcytion name the setTimeout function is not going to call that , that is why the anonymous function is created,that's y anonymous function can be passed as argument to another function
+      
+//  setTimeout(function(){
+//     console.log("i will respond for  4 seconds")
+//  },4000);
+
+//  setInterval(function(){
+//     console.log("for every 2 seconds i wil count ")
+//  },2000);
+
+
+//    function add(a,b){
+//     console.log(a+b);
+// }
+//       add(2,3);
+//filter method : it filters ,eg:if we create an array and i want to filter out something from that particular array the i use filter method
+   var numbers=[1,2,3,4,5,6,7,8,9,10]; //i want to filter even numbers
+   var evenno=numbers.filter(function(n) {
+        return n %2===0;
+    
+   });
+   console.log(evenno);//passing anonynmous function as an argument to the filter
+   console.log(numbers.length);
+//variable functions:
+//variables :- variables are used to store data
+//variable functions:- when vaiables which stores the functions those are called variable functions.
+        
+        let add = function(x,y){
+            return x+y;
+        }
+        console.log(add(2,2));
+//in the above adding anonymous function to the variable(add)
+
+
+//write a function which is going to return a simple intrest of a number
+//the formula of simple intrest is SI = p*t*r/100
+//p=principle t=tenure in years r=rate of intrest per year
+       let SI = function (p,t,r) {
+           return p*t*r/100;
+        }
+    console.log(SI(100000,1,10));
+
+    //by using settimeout function , try to create a variable function called greet and its gng to create hello goodmorning and then use set time out function and pass the parameter funtion and may be after 5 sec it should display
+                             
+        //      setTimeout( (hi)=>{
+        //         console.log("hello good morning");
+
+        //      },1000)
+
+        // //      greet=()=>{
+        // // return hai;}
+        // function hi(){
+        //     console.log("hi");
+        // }
+
+        const greet = function(){
+            console.log(" hi hello goodmorning");
+        }
+        setTimeout(greet,9000);
+
+        //calculate gst with variable function
+                const gst = function(p,gsp){
+
+                    console.log(p+(p*gsp/100))
+                 }
+            
+                setTimeout(gst(900,10),7000);
+
+   </script>
+</body>
+</html>

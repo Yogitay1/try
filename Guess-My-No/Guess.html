@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+
+   
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap" rel="stylesheet"> -->
+
+</head>
+<body>
+    <header>
+        <div id="Again"><button>again</button>
+        <p>(between1 and 20)</p></div>
+        <h1>guess my number </h1>
+        <p class="number">?</p>
+    </header>
+    <main>
+        <section class="left">
+          <input type="number" name="guess" id="guess">
+          <button id="checkBtn"  class="checkBtn">check!</button>
+        </section>
+
+        <section class="right"  >
+            <p class ="message">start guessing </p>
+           <p class="label-score"> score: <span class="score">20</span></p>
+           <p class="label-highscore">highest score: <span class="score">0</span></p>
+        </section>
+    </main>
+</body>
+<script>
+    let secretNumber= Math.floor(Math.random()*20+1);
+    let score=20;
+    let highScore=0;
+
+
+    //logics
+    document.getElementById('checkBtn').addEventListener('click',()=>{
+        const guessedNo=Number(document.getElementById('guess').value);
+       //console.log(guessedNo);
+
+       if(!guessedNo){
+        document.querySelector('.message').textContent="No Number!";
+
+       }
+       //win logics
+
+       else if(guessedNo===secretNumber){
+        document.querySelector('.message').textContent="corret Number"
+        document.querySelector('.number').textContent=secretNumber;
+        document.querySelector('body').style.backgroundColor="green";
+
+        if(score>highScore){
+            highScore=score;
+            document.querySelector('.score').textContent=highScore;
+        }
+       }
+
+//TOO high
+      else if(guessedNo>secretNumber){
+        if(score>1){
+                document.querySelector('.message').textContent="too high";
+                score=score-1;
+                document.querySelector('.score').textContent=score;
+
+        }else{
+            document.querySelector('.message').textContent="you lost the game";
+            document.querySelector('.score').textContent=0;
+
+        }
+      }
+
+      //too low:
+      else if(guessedNo<secretNumber){
+        if(score<1){
+            document.querySelector('.message').textContent="too low";
+            score=score-1;
+            document.querySelector('.score').textContent=score;
+        }
+        else{
+            document.querySelector('.message').textContent="you lost the game";
+            document.querySelector('.score').textContent=0;
+        }
+      }
+    });
+    //Again
+    document.querySelector('#Again').addEventListener('click',()=>{
+      let secretNumber =Math.floor(Math.random()*20+1);
+      console.log(secretNumber);
+      score=20;
+
+        document.querySelector('.message').textContent="start guessing..";
+        document.querySelector('.score').textContent=score;
+        document.querySelector('.number').textContent="?";
+        document.getElementById('guess').value=' ';
+        document.querySelector('body').style.backgroundColor="black";
+
+    })
+
+</script>
+</html>

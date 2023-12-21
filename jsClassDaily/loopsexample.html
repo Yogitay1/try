@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<body>
+   
+      <!--
+        <option value="2020">2020</option>
+       <option value="2021">2021</option>
+       <option value="2022">2022</option>
+       <option value="2023">2023</option>
+      -->
+      
+      <select name=" year" id="year">
+
+      </select>
+
+     
+        <script>
+            //js code:
+      let opt ="<option>Year</option>";
+      for(let i= 2000 ;i<=2023;i++)
+         {
+            opt+="<option value ="+  i +">" + i +"</option>"
+              
+           }
+           document.getElementById('year').innerHTML=opt;
+           //has taken id as year from the select tag to script , to get that data (years ) in the select tag we had written inner.html = opt.
+</script>
+
+  </body>
+</html>
