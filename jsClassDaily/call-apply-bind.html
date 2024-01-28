@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call apply and bind in js</title>
+</head>
+<body>
+    <script>
+        // let name={
+        //     firstName:"yogita",
+        //     lastName:"reddy",
+        //     printFullName: function(){
+        //         console.log(this.firstName+ " "+this.lastName);
+        //     }
+        // }
+        // name.printFullName();
+
+        // let name2={
+        //     firstName:"yogita",
+        //     lastName:"reddybbbbb",
+           
+        // }
+       
+        // //instead of dng this repeatedly 
+        
+        
+        // //use call: using call method , we can do function borrowing ,or we can borrow functions from other objects and use it with that of some other object,
+        
+        //   name.printFullName.call(name2)
+
+
+        //the below one is call method eg:
+    //     let name={
+    //          firstName:"yogita",
+    //         lastName:"reddy"
+
+    //     }
+
+    //   let  printFullName= function(){
+    //             console.log(this.firstName+ " "+this.lastName);
+    //      }
+    //      printFullName.call(name);
+
+    //      let name2={
+    //          firstName:"yogita",
+    //         lastName:"reddybbbbb"
+
+    //     }
+    //     printFullName.call(name2);
+
+
+
+        //.....................
+
+        let name={
+             firstName:"yogita",
+            lastName:"reddy"
+
+        }
+
+      let  printFullName= function(hometown ,state){
+                console.log(this.firstName+ " "+this.lastName+ "from "+hometown +", "+state);
+         }
+         printFullName.call(name ,'nalgonda' ,'telangana');
+
+         let name2={
+             firstName:"yogita",
+            lastName:"reddybbbbb"
+
+        }
+        printFullName.call(name2 , 'ranchi','jharkhand');
+
+        //apply:the apply method is simular to call method  but it accepts functions argument as an array.
+        printFullName.apply(name,['ranchi','jharkand'])
+
+        //bind:it will return u the shallow copy of the function(printfullName) youhave created
+//bind method does not drctly invokes the method , but gives u a shallow copy of that exactly same method which can be involked later. 
+
+let printMyName =printFullName.bind(name,"ranchi","jharkhand");
+//console.log(printMyName);
+printMyName();
+
+//logic after 12hrs it will be pm and aftr that am
+
+    </script>
+</body>
+</html>

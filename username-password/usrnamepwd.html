@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>username password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" class="userName" placeholder="userName">
+    <input type="text" class="password" placeholder="password">
+    <button class="submit">submit</button>
+ 
+    <script>
+        let usrnme = document.querySelector('.userName');
+        let pwd = document.querySelector('.password');
+        let sbt = document.querySelector('.submit');
+
+        sbt.addEventListener('click', ()=>{
+            let ip=usrnme.value;
+            let psd=pwd.value;
+           // let op= ip,psd,sbt;
+            // sbt=op;
+            console.log(ip,psd);
+
+          })
+
+
+    </script>
+</body>
+</html>

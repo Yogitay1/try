@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name,age){
+                //this:
+                this.name=name;
+                this.agee=age;
+            }
+             getName(){
+                return this.name;
+             }
+             getAge(){
+                return this.agee;
+             }
+
+        }
+
+        const Person1 =new Person("yog" ,60);
+       document.write( Person1.getName() +"</br>");
+       
+       document.write( Person1.getAge());
+    //encapsulation :binding the data(constructor(name,age)) and methods( getName(),getAge()) in to a single class(person)
+    //and how abstraction is working :
+        
+//stopped at 28:36
+    </script>
+</body>
+</html>

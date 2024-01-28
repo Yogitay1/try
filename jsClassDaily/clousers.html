@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scopes and clousers in js</title>
+</head>
+<body>
+     <!-- var:var is a global scope variable 
+    let:
+
+
+    clousers: it is feature in js which allows inner function to access the outer scope of the  functions
+
+    in js, closures are created every time a function is created
+    closures helps in binding a function.
+
+    lexical scoping: is functions ability to access the variables from the parent scope .
+    
+    understanding scopes in js:
+    -global scope (var)
+    -local scope (let, const)
+
+    -->
+     <h2>js closures example-banking</h2>
+     <button type="button" onclick="accountbal()">click me!</button>
+
+
+    <script>
+
+        let global = "this is global variable";
+             function fun(){
+                let local = "this is a local variable";
+                console.log(global);
+                console.log(local);
+
+             }
+             fun();
+
+
+
+// ----------------------------------------------------------
+
+
+
+let globall = "this is globall variable";
+             function func(){
+                let local = "this is a locall variable";
+                
+
+             }
+             func();
+             console.log(globall);
+                console.log(locall);
+
+
+
+
+                // ------------------------------------------------------------------------
+
+                // example of closures
+                 
+                function outer(){
+                    var a=10;
+
+                    function inner(){
+                        return a;
+
+                    }
+                    return inner;
+                }
+                var getoutput=outer();
+                console.log(getoutput());
+            
+    //-------------------------------------------------
+    //eg:2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //-----------------------------
+   
+              function accountbal(){
+                var balance=1000;
+                balance=balance;
+
+                function currentbalance() {
+                    balance=balance-100;
+
+                    
+                    alert('the currenyt balance is:' +balance);
+
+                }
+                currentbalance();
+                
+              }
+
+
+
+
+    </script>
+</body>
+
+
+
+</html>

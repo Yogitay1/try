@@ -1,0 +1,13 @@
+/* .thumbnail{
+    height:100vh;
+    background-size: cover;
+
+} */
+.body{
+    background-image: url('/youtubeproject/img/thumbnail-1.webp');
+    height: 100vh;
+    background-size: cover;
+}
+p{
+    color: palevioletred;
+}

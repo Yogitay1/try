@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            color:white;
+            background-color: black;
+        }
+        .Done{
+            display:block;
+        }
+        .todo-container{
+            width:400px;
+            border: 1px solid pink;
+            border-top: 10px;
+            border-radius: 5px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow:0 0 15px rgb(110, 86, 31) ;
+
+        }
+        h1{
+            text-align: center;
+        }
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="todo-container" >
+        <h1>To-do List</h1>
+      <div class="input-container">
+        <input type="text" name="task" id="taskInput"
+        placeholder="add a new task...">
+             <button onclick="Add()">Add</button>
+             <button onclick= "Done()" class="Done">Done</button>
+             <button onclick= 'Delete()' class="delete">Delete</button>
+         </div>
+         <ul id="taskList"></ul>
+        </div>
+         <script>
+                    //   const a =addEventListener{
+
+                    //   }
+                    const tsk = document.getElementById(taskInput);
+                           ip=tsk.taskInput.value;
+                           console.log(ip);
+
+                            
+
+                    // const a=function Add(){
+                    //    a= Add.value();
+                    //    return a;
+
+                    // }
+                  
+
+                    //   const b=function Done(){
+                    //            b = Done.value.trim();
+                             //}
+         </script>
+       </body>
+   </html>
+
+   <!-- //use promt method -->
+

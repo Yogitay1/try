@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+   <style>
+    .box{
+        border: 1px solid red;
+        background-color: yellow;
+        padding: auto;
+    }
+   </style>
+</head>
+
+<body>
+    <!-- 
+        js selectors:
+        -getElementsByTagName()
+        -getElementsByClassNaame()
+        -getElementsbyId()
+        -querySelector()
+        -querySelectorAll()
+     -->
+     <div>HTML</div>
+     <section class="box">CSS</section>
+     <div>JavaScript</div>
+     <section class="box">React</section>
+     
+     <h1 id="ab" >yogitha</h1>
+    <script>
+
+   //document.getElementByTagName(section)[1].style.backgroundColor='pink';
+
+
+        //using classList:
+        //document.getElementsByTagName('section')[0].classList='box';
+        
+        //loops
+        
+         console.log(document.getElementsByClassName('box')); 
+
+         let classList=document.getElementsByClassName('box');
+          for(let i=0;i<classList.length;i++){
+            classList[i].style.backgroundColor="pink";
+          }
+          let secList= document.getElementsByTagName("div");
+             for(let i=0;i<secList.length;i++){
+                  secList[i].classList="box";
+             }
+
+             //the above both selectors(getElementsByTagName,getElementsByClassName) these both returns collections 
+             //but the getElementByid does not return collections
+
+             document.getElementById("ab").style.color="blue";
+             //in this getElementById does not return collection and also no need to provide index value that is es6
+            
+
+             //query selector:it will select only one in box 
+            console.log( document.querySelector('section.box'));
+
+            let element = document.querySelectorAll('section.box')
+            for(let i=0;i<element.length;i++){
+                element[i].style.backgroundColor="lavender";
+            }
+
+   
+   
+   
+   </script>
+</body>
+</html>

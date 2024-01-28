@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <style>
+       div{
+          border:1px solid blue;
+          width: 210px;
+          padding: 100px;
+          border-radius: 20px;
+    }
+       h1{
+        color: blue;
+       }
+
+       form input{
+        padding: 6px;
+        border-radius: 10px;
+       }
+
+         form input,input{
+           margin: 5px;
+           border: 1px solid rgb(76, 101, 202);
+       } 
+       .mandatory{
+         color: rgb(236, 74, 74);
+       }
+
+       .dNone{
+         color: red;
+         display: none;
+       }
+.sucess{
+    display: none;
+   opacity: 50%;
+      transition: opacity 3s ease-in; 
+}
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            Login form</h1>
+
+           <form> 
+              <h3>
+                    <label for="email">Email <span class="mandatory">*</span></label>
+                    <input type="email" classname="email-id" id="Email" placeholder="email-id" ></br>
+                    <span class="dNone" id="eErr"> pls entr your   email....</span>
+
+                    <label for="password">password <span class="mandatory">*</span></label>
+                    <input type="password" name="password" id="password" placeholder="password" > 
+                    <span class="dNone" id="pErr">pls entr ur password</span>
+
+                    <input type="button" placeholder="Login" value="login" id="login">
+                    <span class="sucess" id="sucess">logged in sucessfully</span>
+               
+                </h3>
+            </form> 
+
+            <h4>forgot password ? <a href="#">click here</a>
+                <h4>dont have account?<a href="#" >clck here</a> </h4>
+            </h4>
+    </div>
+
+    <script>
+              document.getElementById('login').addEventListener('click',()=>{
+                    let email,pswd;
+
+                    email=document.getElementById('Email').value;
+                    pswd=document.getElementById('password').value;
+
+                    if(email===""){
+                        document.getElementById('eErr').style.display='block';
+                    }
+                    else{
+                        document.getElementById('eErr').style.display='none';
+                    }
+
+                   if(pswd==="") {
+                    document.getElementById('pErr').style.display='block';
+                   }
+                   else{
+                    document.getElementById('pErr').style.display='none';
+                   }
+
+                   if(email!=="" && pswd!==""){
+                    // alert("logged in succesfully");
+                    //document.getElementById('sucess').style.display=block'
+                   
+                    let sucessfull =()=>{
+                        document.getElementById('sucess').style.display="inline-block";
+                       // sucessfull.style.display='inline-block';
+                    } 
+                    setTimeout(sucessfull,2000);
+
+                   }
+              })
+
+              //assignment:by clicking on the account icon the entire login form should be appeared.
+    </script>
+</body>
+</html>

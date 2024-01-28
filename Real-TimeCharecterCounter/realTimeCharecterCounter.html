@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealTimeCharecterCounter 22-12-23</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="card">Real-Time Charecter Counter
+
+      <!-- <input type="text" class="typehere" placeholder="typehere">-->
+       <textarea name="typehere" id="typehere" ></textarea>
+      <p > total Charecter: <span class='totalcharecters'> </span></p>
+      <p > Remaining: <span class="Remaining" > 50</span></p>
+    </div>
+<script>
+  var a = document.querySelector('.totalcharecters');
+  var c = document.querySelector('.Remaining');
+    var printer = document.getElementById('typehere');
+    printer.addEventListener('input', (t)=> {
+        var text =t.target.value;
+        console.log(text);
+         var b =(text.length);
+           a.innerText = b;
+         c.innerText = 50-b;
+        if(c.innerText==0){
+          c.innerText="charecter cmplted";
+        }
+        
+  })
+  //usrname,pass whn pressed sbmt , alert msg shld cme
+ 
+
+
+      
+</script>
+</body>
+
+</html>

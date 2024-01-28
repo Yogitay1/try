@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard events</title>
+</head>
+<body>
+      <!-- events
+          -click
+          -dblclick
+          -mouseup
+          -mousedown
+          -mouseenter
+          -mouseleave
+          -mousemove
+          -contextmenu
+
+       -->
+
+    <!-- keyboard events - if u want to attack particular event
+    -keydown :what ever button we are pressing in keyboard the function is working ; then how to stop ,like i only waNT one btn to responded and that functionality should run , then learn  string interpolation
+    -keyup: when u release ur hand on the button then the functionality will run(like it will show alert button)
+    -key press
+    -keydown with modifiers :if u only want to attack only eith one key btn
+    -keydown with modifiers:if i want to attack an event only with one key , like if i want like only one key btn should be work (like i only want enter key btn should only do function)
+ -->
+ <script>
+    //  document.addEventListener('keydown',(eventt)=>{
+    //      alert(`key pressed: ${eventt.key}`);
+    //  })
+
+
+    //  document.addEventListener('keyup',(eventt)=>{
+    //       alert(`keypressed : ${eventt.key}`);
+    //  })
+
+    // document.addEventListener('keypress',(a)=>{
+    //     alert(`key is pressed: ${a.key}`)
+    // })
+
+    // document.addEventListener('keydown',(eventt)=>{
+    //    if(eventt.key==="Enter"){
+    //     alert(`enter key is pressed `)
+    //    }
+    // })
+
+    document.addEventListener('keydown',(eventt)=>{
+       if(eventt.key==="a"){
+        alert(`a key is pressed `)
+       }
+    })
+
+//i want two btns like ctrl+c then only one event should be triggered
+document.addEventListener('keydown',(e)=>{
+    if(e.ctrlKey && e.key==='c'){
+        alert(`ctrl +c is pressed`);
+    }
+})
+
+    // string interpolation method:(``) with help of back tick`` operator we can also create a string , with the help of string interpolation we create string also , 
+    //while using string interpolation method only back tick only should be used , not single quote or double quote.
+     // this string interpolation also called template literal or template string (in single quote or double quote we cant do any caluculations or expressions )  but in this sting interpolation method(``) will allow to write expression with in that partucular string
+  //string interpolation: `${expression}`
+     //example:
+    
+    const name="yogitha";
+    const age=21;
+    
+    console.log('my name is ' + name+" and i am " +age +" years old");
+
+    console.log(`I am  ${name} and i am ${age+2 } years old`);
+     
+
+</script>
+</body>
+</html>

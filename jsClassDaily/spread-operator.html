@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        spread operator (...) :in js ,spread operator is feature which is used to for various operations ,
+         such as copying , combining arrays ,and spread the objects . 
+     -->
+     <script>
+        const number= [1,2,3,4,5];
+        console.log(number);
+
+        const copiedNumber=[...number];
+        console.log(copiedNumber);
+
+        const number2=number;
+        console.log(number2);
+
+        console.log(number===copiedNumber);//false
+        console.log(number===number2);//true
+
+
+        //combinig arrays
+        const arr1=[1,2,3];
+        const arr2=[4,5,6];
+        const arr3=[7,8,9];
+        const combinedArray=[...arr1,...arr2,...arr3];
+        console.log(combinedArray);
+
+
+        //spread the objects:unpacking the objects 
+        const person={
+            name:"yog",
+            age:25
+
+        }
+        console.log(person);
+
+        const updatedPerson={...person,age:28 , state:"andhra"};
+        console.log(updatedPerson);
+        
+//copying the object:
+ const obj1={
+    id:1,
+    course:"reactjs"
+ }
+ console.log(obj1);
+
+
+ //sprdoperator with function argument
+
+ function multi(a,b,c) {
+    return a*b*c;
+    
+ }
+// const multipliucation =multi(2,3,4);
+const numb=[2,3,4];
+const multiplication=multi(...numb);
+console.log(multiplication);
+
+
+     </script>
+</body>
+</html>

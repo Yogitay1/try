@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Hoisting:hoisting is a behaviour in javascript , where variables and function declaration are 
+        moved to the top of the containg scope during the compilation phase , beforre the 
+        code is executed.
+
+        note:only declarations are hoisted ,not the initialization
+        
+        
+        2 types of hoisting:
+           -variable hoisting 
+           
+           -function hoisting =you can create the function anywhere and you can call the function anywhere. greet(); 
+
+          function greet() {
+            console.log("hello ");
+          }
+         
+        
+       destructuring: es6 concept in js that allows you to      extract the values from arrays or 
+       objects and assign them to variables in concise and convenient way.
+
+
+
+     -->
+
+     <script>
+    //Array Destructuring
+       var concept=['html','css',"js","reactjs"];
+
+//ES5
+       let a= concept[0];
+       let b= concept[0];
+       let c= concept[0];
+       let d= concept[0];
+
+       console.log(a,b,c,d);
+
+       //ES5:
+           let[l,m, ,n] = concept;
+            console.log(l,m,n);
+         
+          //object destructuring:
+          const user={
+            name:"yogitha",
+            age:28
+
+          }
+          //ES5
+        //   let name=user.name;
+        //   let age=user.age;
+        //   console.log(name,age);
+
+
+          //ES6
+        //   let{name,age}=user
+        //   console.log(name,age); 
+          
+          
+        //   we can also write like
+        let{name:yogita,age:reddy}=user;
+        console.log(yogita,reddy);
+          
+          </script>
+</body>
+</html>

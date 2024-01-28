@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CRUD operator in Js </title>
+</head>
+<body>
+    <!-- 
+       C: Create
+       R: Read
+       U: Update
+       D: Delete
+     -->
+        <script>
+            let items=[
+                       {id:1,name:"item1"},
+                       {id:2,name:"item2"},
+                       {id:3,name:"item3"}
+                    ];
+             //Read(retrieve all items);
+             function readitems(){
+                return items;
+             }
+            console.log(readitems());
+
+            //read specific items based on id
+            // function readItemsById(numb){
+            //      return items.find(product=>product.id===numb)
+            // }
+            // console.log(readItemsById(2));
+
+           //find by name
+           function readItemsByName(a){
+            return items.find(b=>b.name===a)
+           }
+            console.log(readItemsByName("item1"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            function abid(ids) {
+                return items.find(yog=>yog.id===ids)
+            }
+           console.log(abid(3)); 
+        </script>
+</body>
+</html>

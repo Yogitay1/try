@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        events:
+           -mouse events:
+              -click:
+              -double click: dblclick
+              -mousedown:
+              -mouse up:
+              -mouseenter:
+              -mouseleave:
+              -mousemove:
+              -contextmenu:
+
+
+              -keyboard events: 
+     -->
+     <form>
+     <input type="button" value="login here" name="my-button" id="my-button" >
+
+    </form>
+         <script>
+
+            //click :event wil be trigered when the mouse is pressed and released on an element
+
+            let mybutton = document.querySelector('#my-button');
+            // let mybutton = document.getElementById('my-button');
+                // mybutton.addEventListener('click',
+                //     function(){
+                //         alert("button is clicked")
+                //     })
+            // document.getElementById('my-button').addEventListener('click',function(){
+            //          alert("hi i came")
+           // })
+
+           //doubleclick: syntax:dblclick
+             document.getElementById('my-button').addEventListener('dblclick',function(){
+               alert('button double cliked');
+             })
+
+             //mousedown:when we press the btn then functionality will run till that that time
+               //mouseup : when u release the button then onl;y functionality will appear
+               
+            //    document.getElementById('my-button').addEventListener('mousedown',()=>{
+            //     alert('button mouse down');
+            //    });
+
+
+            //---------------------------------------mouseup
+            //    document.getElementById('my-button').addEventListener('mouseup',()=>{
+            //     alert('button mouse up');
+            //    });
+
+
+            //---------------------------------------mouseenter ,when we touch the btn also functionality will run
+            // document.getElementById('my-button').addEventListener('mouseenter',()=>{
+            //     alert('button mouse enterd');
+            //    });
+
+              //---------------------------------------mouseleave  when we touch the btn and move out of the btn then only the functiuonality will run.
+            // document.getElementById('my-button').addEventListener('mouseleave',()=>{
+            //     alert('button mouse leaved');
+            //    });
+        
+             
+            //---------------------------------------mousemove when the mouse is moved over the btn at that tym the functionality will run
+            document.getElementById('my-button').addEventListener('mousemove',()=>{
+                alert('button mouse moved');
+               });
+
+        
+            // document.getElementById('my-button').addEventListener('contextmenu',()=>{
+            //     alert('mouse right button clicked ');
+            //    });
+            
+     </script>
+    
+</body>
+</html>

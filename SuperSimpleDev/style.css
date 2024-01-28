@@ -1,0 +1,61 @@
+#links{
+    padding: 10px;
+}
+
+
+
+#subscribeBtn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: rgb(197, 27, 27);
+    color:white;
+    border-radius:3px;
+    border: none;
+    padding:  11px 18px ;
+    transition: opacity 0.15s;
+
+    
+   
+}
+#subscribeBtn:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#joinBtn{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:white ;
+    margin:rgb(50, 142, 254); 
+    padding: 8px;
+    color:rgb(50, 142, 254); 
+    font-size: 15px;
+    border-radius: 2px;
+    border: 2px solid rgb(50, 142, 254) ;
+    margin-left: 10px;
+    transition: background-color 1s;
+}
+
+#joinBtn:hover{
+    background-color: rgb(50, 142, 254);
+    color:white;
+}
+
+#Tweetbtn{
+    color: white;
+    background-color:rgb(50, 142, 254); 
+    border: none;
+    border-radius: 20px;
+    padding: 11px 18px ;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    
+
+}
+#Tweetbtn:hover{
+    box-shadow: 1px 1px  5px rgba( 50, 142, 254 , 9) ;
+}
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map,filter and reduce</title>
+</head>
+<body>
+    <script>
+        //map():is used to create a new array by applying a function to each element of the original array
+       let number=[1,2,3,4,5];
+       console.log(number);
+
+       let doublenumber=number.map((num)=>{
+      return num*2;
+       });
+       console.log(doublenumber);
+
+
+       const words=["apple","banana","cherry"];
+
+
+       const wordsl=['cat','dog','elephant','lion','tiger']
+         let filterword=wordsl.filter(word=>word.length)
+         console.log(filterword);
+    
+    </script>
+</body>
+</html>
